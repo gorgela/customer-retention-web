@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inifinix CELLPHONE FONEHUB ACCESSORIES website</title>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>Inifinix CELLPHONE FONEHUB ACCESSORIES Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Mobile Marvels</a>
+        <a href="index.html" class="logo">
+            <img src="../Pictures/logo.jpg" alt="Inifinix Phone and Accessories" />
+        </a>
 
 
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <div class="dropdown">
-            <li><a href="categories.html">Shop <i class="fas fa-caret-down"></i></a></li>
+            <li><a href="index.html#shop">Shop <i class="fas fa-caret-down"></i></a></li>
             <div class="sub-menu">
                 <ul>
                    <li><a href="phones.html">Phones</a></li>
@@ -27,16 +33,23 @@
                </ul>
            </div>
         </div>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
     </header>
     <section class="home" id="home">
         <div class="home-text">
             <span>Welcome To</span>
             <h1>Infnix CELLPHONE FONEHUB ACCESSORIES</h1>
             <h2>Selling phones and <br>accessories</h2>
-            <a href="#" class="btn">Buy Now</a>
+            <a href="index.html#shop" class="btn">Buy Now</a>
         </div>
             <div class="home-img">
                 <img src="hu.jpg" alt="">
@@ -53,6 +66,14 @@
                         <img src="hi.jpg" alt="">
                     </div>
                     <h2>Phone</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
                     <span></span>
                     <a href="phones.html" class="btn">Order Now</a>
                 </div>
@@ -62,6 +83,14 @@
                         <img src="char.jpg" alt="">
                     </div>
                     <h2>Charger</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
                     <span></span>
                     <a href="accessories.html" class="btn">Order Now</a>
                 </div>
@@ -71,6 +100,14 @@
                         <img src="ear.jpg" alt="">
                     </div>
                     <h2>Ear pads</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
                     <span></span>
                     <a href="accessories.html" class="btn">Order Now</a>
                 </div>
@@ -80,6 +117,14 @@
                         <img src="pwer.jpg" alt="">
                     </div>                     
                    <h2>Power Bank</h2>
+                   <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(4.5)</span>
+                </div>
                     <span></span>
                     <a href="accessories.html" class="btn">Order Now</a>
                 </div>
@@ -89,6 +134,14 @@
                         <img src="ss.jpg" alt="">
                     </div>
                     <h2>Phone Case</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
                     <span></span>
                     <a href="accessories.html" class="btn">Order Now</a>
                 </div>
@@ -98,29 +151,42 @@
                         <img src="tb.jpg" alt="">
                     </div>
                     <h2>iPads</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
                     <span></span>
                     <a href="iPads.html" class="btn">Order Now</a>
                 </div>
             </div>
         </section>
 
+        <section class="map" id="map">
+            <div class="heading">
+                <span>Our Location</span>
+                <h1>Visit Us</h1>
+            </div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d246.70921789397778!2d124.86691214770997!3d8.36743731214159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1730018270159!5m2!1sen!2sph" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+        
+
         <footer class="">
             <div class="footer">
-                © Copyright <strong><span>Mobile Marvels</span></strong>. All Rights Reserved
+                © Copyright <strong><span>Inifinix Phone and Accessories</span></strong>. All Rights Reserved
                 
             </div>
         </footer>
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="app.js"></script>
 </body>

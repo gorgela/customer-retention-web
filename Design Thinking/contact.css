@@ -17,7 +17,7 @@
 }
 
 section {
-    padding: 100px 10% 50px;
+    padding: 50px 10%;
 }
 
 *::selection {
@@ -40,7 +40,7 @@ header {
     justify-content: space-between;
     background-color: white;
     box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
-    padding: 20px 10%;
+    padding: 15px 10%;
     transition: 0.2s;
 }
 
@@ -65,7 +65,6 @@ header {
     color: var(--second-color);
     font-weight: 600;
     text-transform: uppercase;
-    
 }
 
 .navbar a:hover {
@@ -278,7 +277,68 @@ header {
     color: yellow; 
 }
 
-/* Search Bar Styles */
+.contact-us {
+    padding-top: 80px; 
+     padding-bottom: 50px; 
+    background: #ebdbc8; 
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details h3 {
+    color: var(--second-color);
+    margin-top: 20px;
+}
+
+.contact-details p {
+    color: #555; 
+    margin: 5px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--main-color); 
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--second-color); 
+}
+
 .search-container {
     display: flex;
     align-items: center;
@@ -291,11 +351,11 @@ header {
     border-radius: 20px 0 0 20px; 
     outline: none;
     width: 200px; 
-    transition: width 0.3s; /* Optional for expanding effect */
+    transition: width 0.3s;
 }
 
 .search-bar:focus {
-    width: 250px; /* Expand on focus */
+    width: 250px; 
 }
 
 .search-button {
@@ -306,7 +366,7 @@ header {
     background-color: var(--main-color);
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s;
 }
 
 .search-button:hover {

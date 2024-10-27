@@ -62,13 +62,17 @@
         </div>
 
         <h3>Send Us a Message:</h3>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="infinixcellphonefonehubaccesso@gmail.com">Send Message</button>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="e7b55938-c5cf-4859-9562-3b5623a388c8">
+            <input type="text" name="name" placeholder="Your Name" required class="form-input">
+            <input type="email" name="email" placeholder="Your Email" required class="form-input">
+            <input type="tel" name="phone" placeholder="Your Phone Number" required class="form-input">
+            <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+            <button type="submit" class="form-button">Send Message</button>
         </form>
+        
+        
+        
     </section>
 
     <footer class="footer">
